@@ -8,8 +8,6 @@ user_choice = 0
 
 
 def func():
-    a = 0
-    b = 0
     sd = int(round)
     print('paper=1 rock=2 scissors=3')
     for i in range(sd):
