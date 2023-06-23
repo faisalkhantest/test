@@ -1,4 +1,5 @@
 print('hello future dragon riders')
+print("hello")
 print('I hope you have fun','To have fun you MUST FOLLOW the rules')
 print('by the way i\'m Rayd')
 _get_ready='get ready'
