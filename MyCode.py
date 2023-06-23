@@ -47,7 +47,7 @@ def situation(hunter=input('Drago captered your friends and there dragons and wo
         if hunter =='Send a terror mail to Berserker Island to lend some gold and Berk to lend meta to exchange with Drago 'or hunter=='launch a stealth mission':
             print('You need more practice')    
         else:
-            print('your fired')  
+            print('your fired!!')  
 
 situation()   
 def favnum():

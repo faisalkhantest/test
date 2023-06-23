@@ -2,12 +2,13 @@ import sys
 import random
 global additional
 additional = 3
-a = 0
-b = 0
 user_choice = 0
 
 
 def func():
+    a=0
+    b = 0
+    trackster=0
     sd = int(round)
     print('paper=1 rock=2 scissors=3')
     for i in range(sd):
@@ -26,6 +27,7 @@ def func():
             else:
                 print("Computer chose " + num+'\n'+name +
                       ':'+str(a)+'\ncomputer:'+str(b))
+            trackster+=1
         elif user_choice == 'EXIT':
             if a < b:
                 c = b-a
@@ -38,18 +40,42 @@ def func():
             else:
                 print('''YOU TIED''')
                 sys.exit()
+            trackster+=1
+        
         else:
-            func()
+           print('Sorry you provided an INVALID ANSWER')
+           sys.exit
+    if a < b:
+                c = b-a
+                print('you 👎LOST👎 BY:'+str(c)+' points')
+                sys.exit()
+    elif b < a:
+                c = a-b
+                print('''  YOU---WON-- BY'''+str(c)+' point')
+                sys.exit()
+    else:
+                print('''YOU TIED''')
+                sys.exit()
+             
+                   
+
+
+                
+
+        
 
 
 print("Welcome to Paper Rock Scissor Game")
 name = input('what is your name? ')
 round = input('How many rounds do you want to play? ')
-if round.isdigit() == False:
+if round.isdigit() == False or round=='0':
     for i in range(3):
-        if round.isdigit() == True:
+        if round.isdigit() == True and round!='0':
             break
-        print("you entered wrong")
+        if round.isdigit() == False:  
+          print("you entered wrong")
+        else:
+             print('0 is NOT allowed')
         round = input('How many rounds do you want to play? ')
     else:
         print('sorry invalid answer')
